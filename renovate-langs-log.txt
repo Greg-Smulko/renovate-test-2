@@ -1,0 +1,886 @@
+INFO: Repository started
+{
+  "renovateVersion": "19.160.6"
+}
+DEBUG: Using localDir: /mnt/renovate/gh/Greg-Smulko/renovate-test-2
+DEBUG: initRepo("Greg-Smulko/renovate-test-2")
+DEBUG: Greg-Smulko/renovate-test-2 owner = Greg-Smulko
+DEBUG: Greg-Smulko/renovate-test-2 default branch = master
+DEBUG: Using app token for git init
+DEBUG: Initializing git repository into /mnt/renovate/gh/Greg-Smulko/renovate-test-2
+DEBUG: git clone completed
+{
+  "seconds": 0.7
+}
+DEBUG: latest commit
+{
+  "latestCommitDate": "2020-03-07 19:05:19 +0000"
+}
+DEBUG: Git private key configured, but not being set
+DEBUG: Setting git author
+{
+  "gitAuthor": {
+    "name": "Renovate Bot",
+    "email": "bot@renovateapp.com"
+  }
+}
+DEBUG: resetMemCache()
+DEBUG: detectSemanticCommits()
+DEBUG: getCommitMessages
+DEBUG: Semantic commits detection: unknown
+DEBUG: No semantic commits detected
+DEBUG: checkOnboarding()
+DEBUG: isOnboarded()
+DEBUG: findFile(renovate.json)
+DEBUG: config file exists
+DEBUG: ensureIssueClosing(Action required: Add a Renovate config)
+DEBUG: Retrieving issueList
+DEBUG: Retrieved 0 issues
+DEBUG: Repo is onboarded
+DEBUG: Found renovate.json config file
+DEBUG: Repository config
+{
+  "configFile": "renovate.json",
+  "config": {
+    "extends": [
+      ":separateMajorReleases",
+      ":combinePatchMinorReleases",
+      ":ignoreUnstable",
+      ":prImmediately",
+      ":semanticPrefixFixDepsChoreOthers",
+      ":updateNotScheduled",
+      ":automergeDisabled",
+      ":ignoreModulesAndTests",
+      ":maintainLockFilesDisabled",
+      ":autodetectPinVersions",
+      "group:monorepos",
+      "group:recommended",
+      "helpers:disableTypesNodeMajor"
+    ],
+    "nuget": {
+      "enabled": true,
+      "registryUrls": [
+        "https://api.nuget.org/v3/index.json"
+      ]
+    },
+    "js": {
+      "managerBranchPrefix": "js-",
+      "prConcurrentLimit": 1
+    },
+    "dotnet": {
+      "managerBranchPrefix": "dotnet-",
+      "prConcurrentLimit": 1
+    },
+    "masterIssue": true,
+    "labels": [
+      "renovate"
+    ],
+    "automerge": false
+  }
+}
+DEBUG: migrateAndValidate()
+DEBUG: No config migration necessary
+DEBUG: massaged config
+{
+  "config": {
+    "extends": [
+      ":separateMajorReleases",
+      ":combinePatchMinorReleases",
+      ":ignoreUnstable",
+      ":prImmediately",
+      ":semanticPrefixFixDepsChoreOthers",
+      ":updateNotScheduled",
+      ":automergeDisabled",
+      ":ignoreModulesAndTests",
+      ":maintainLockFilesDisabled",
+      ":autodetectPinVersions",
+      "group:monorepos",
+      "group:recommended",
+      "helpers:disableTypesNodeMajor"
+    ],
+    "nuget": {
+      "enabled": true,
+      "registryUrls": [
+        "https://api.nuget.org/v3/index.json"
+      ]
+    },
+    "js": {
+      "managerBranchPrefix": "js-",
+      "prConcurrentLimit": 1
+    },
+    "dotnet": {
+      "managerBranchPrefix": "dotnet-",
+      "prConcurrentLimit": 1
+    },
+    "masterIssue": true,
+    "labels": [
+      "renovate"
+    ],
+    "automerge": false
+  }
+}
+DEBUG: migrated config
+{
+  "config": {
+    "extends": [
+      ":separateMajorReleases",
+      ":combinePatchMinorReleases",
+      ":ignoreUnstable",
+      ":prImmediately",
+      ":semanticPrefixFixDepsChoreOthers",
+      ":updateNotScheduled",
+      ":automergeDisabled",
+      ":ignoreModulesAndTests",
+      ":maintainLockFilesDisabled",
+      ":autodetectPinVersions",
+      "group:monorepos",
+      "group:recommended",
+      "helpers:disableTypesNodeMajor"
+    ],
+    "nuget": {
+      "enabled": true,
+      "registryUrls": [
+        "https://api.nuget.org/v3/index.json"
+      ]
+    },
+    "js": {
+      "managerBranchPrefix": "js-",
+      "prConcurrentLimit": 1
+    },
+    "dotnet": {
+      "managerBranchPrefix": "dotnet-",
+      "prConcurrentLimit": 1
+    },
+    "masterIssue": true,
+    "labels": [
+      "renovate"
+    ],
+    "automerge": false
+  }
+}
+DEBUG: Found repo ignorePaths
+{
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/vendor/**",
+    "**/examples/**",
+    "**/__tests__/**",
+    "**/test/**",
+    "**/tests/**",
+    "**/__fixtures__/**"
+  ]
+}
+DEBUG: checkBaseBranch()
+DEBUG: config.repoIsOnboarded=true
+DEBUG: Setting baseBranch to master
+DEBUG: latest commit
+{
+  "branchName": "master",
+  "latestCommitDate": "2020-03-07 19:05:19 +0000"
+}
+DEBUG: Setting branchPrefix: renovate/
+DEBUG: No vulnerability alerts found
+DEBUG: processRepo()
+DEBUG: findIssue(Update Dependencies (Renovate Bot))
+DEBUG: No baseBranches
+DEBUG: extractAndUpdate()
+DEBUG: Using file match: (^|/)tasks/[^/]+\.ya?ml$ for manager ansible
+DEBUG: Using file match: (^|/)requirements\.ya?ml$ for manager ansible-galaxy
+DEBUG: Using file match: (^|/)WORKSPACE$ for manager bazel
+DEBUG: Using file match: \.bzl$ for manager bazel
+DEBUG: Using file match: buildkite\.ya?ml for manager buildkite
+DEBUG: Using file match: \.buildkite/.+\.ya?ml$ for manager buildkite
+DEBUG: Using file match: (^|/)Gemfile$ for manager bundler
+DEBUG: cargo is disabled
+DEBUG: Using file match: (^|/).circleci/config.yml$ for manager circleci
+DEBUG: cocoapods is disabled
+DEBUG: Using file match: (^|/)([\w-]*)composer.json$ for manager composer
+DEBUG: Using file match: (^|/)deps\.edn$ for manager deps-edn
+DEBUG: Using file match: (^|/)docker-compose[^/]*\.ya?ml$ for manager docker-compose
+DEBUG: Using file match: (^|/)Dockerfile$ for manager dockerfile
+DEBUG: Using file match: (^|/)Dockerfile\.[^/]*$ for manager dockerfile
+DEBUG: Using file match: (^|/).drone.yml$ for manager droneci
+DEBUG: git-submodules is disabled
+DEBUG: github-actions is disabled
+DEBUG: Using file match: ^\.gitlab-ci\.yml$ for manager gitlabci
+DEBUG: Using file match: ^\.gitlab-ci\.yml$ for manager gitlabci-include
+DEBUG: Using file match: (^|/)go.mod$ for manager gomod
+DEBUG: Using file match: \.gradle(\.kts)?$ for manager gradle
+DEBUG: Using file match: (^|/)gradle.properties$ for manager gradle
+DEBUG: Using file match: (^|/)gradle/wrapper/gradle-wrapper.properties$ for manager gradle-wrapper
+DEBUG: Using file match: (^|/)requirements.yaml$ for manager helm-requirements
+DEBUG: Using file match: (^|/)values.yaml$ for manager helm-values
+DEBUG: Using file match: (^|/)helmfile.yaml$ for manager helmfile
+DEBUG: Using file match: ^Formula/[^/]+[.]rb$ for manager homebrew
+DEBUG: Using file match: \.html?$ for manager html
+DEBUG: Using file match: (^|/)kustomization\.yaml for manager kustomize
+DEBUG: Using file match: (^|/)project\.clj$ for manager leiningen
+DEBUG: Using file match: \.pom\.xml$ for manager maven
+DEBUG: Using file match: (^|/)pom\.xml$ for manager maven
+DEBUG: Using file match: (^|/)package.js$ for manager meteor
+DEBUG: Using file match: (^|/)mix\.exs$ for manager mix
+DEBUG: Using file match: (^|/)package.json$ for manager npm
+DEBUG: Matched 1 file(s) for manager npm: package.json
+DEBUG: npm file package.json has name "renovate-test"
+DEBUG: Detecting Lerna and Yarn Workspaces
+DEBUG: Finding locked versions
+DEBUG: Found package-lock.json for package.json
+DEBUG: Found npm package files
+DEBUG: Using file match: \.(?:cs|fs|vb)proj$ for manager nuget
+DEBUG: Matched 1 file(s) for manager nuget: renovate-test.csproj
+DEBUG: Found nuget package files
+DEBUG: Using file match: ^.nvmrc$ for manager nvm
+DEBUG: Using file match: (^|/)([\w-]*)requirements.(txt|pip)$ for manager pip_requirements
+DEBUG: Using file match: (^|/)setup.py$ for manager pip_setup
+DEBUG: pipenv is disabled
+DEBUG: Using file match: (^|/)pyproject\.toml$ for manager poetry
+DEBUG: Using file match: (^|/)pubspec\.ya?ml$ for manager pub
+DEBUG: Using file match: (^|/)\.ruby-version$ for manager ruby-version
+DEBUG: Using file match: \.sbt$ for manager sbt
+DEBUG: Using file match: project/[^/]*.scala$ for manager sbt
+DEBUG: Using file match: (^|/)Package\.swift for manager swift
+DEBUG: Using file match: \.tf$ for manager terraform
+DEBUG: Using file match: ^.travis.yml$ for manager travis
+DEBUG: Found 2 package file(s)
+DEBUG: manager.fetchUpdates()
+DEBUG: packageFiles with updates
+{
+  "config": {
+    "npm": [
+      {
+        "packageFile": "package.json",
+        "deps": [
+          {
+            "depType": "dependencies",
+            "depName": "a",
+            "currentValue": "^2.0.11",
+            "datasource": "npm",
+            "prettyDepType": "dependency",
+            "lockedVersion": "2.0.11",
+            "updates": [],
+            "warnings": [],
+            "sourceUrl": "https://github.com/alfateam/a"
+          },
+          {
+            "depType": "dependencies",
+            "depName": "b",
+            "currentValue": "^1.0.0",
+            "datasource": "npm",
+            "prettyDepType": "dependency",
+            "lockedVersion": "1.0.0",
+            "updates": [
+              {
+                "fromVersion": "1.0.0",
+                "toVersion": "2.0.1",
+                "newValue": "^2.0.0",
+                "newMajor": 2,
+                "newMinor": 0,
+                "updateType": "major",
+                "isSingleVersion": false,
+                "isRange": true,
+                "releaseTimestamp": "2013-05-06T09:58:51.846Z",
+                "canBeUnpublished": false
+              }
+            ],
+            "warnings": [],
+            "sourceUrl": "https://github.com/vesln/b"
+          },
+          {
+            "depType": "dependencies",
+            "depName": "d",
+            "currentValue": "^1.0.0",
+            "datasource": "npm",
+            "prettyDepType": "dependency",
+            "lockedVersion": "1.0.0",
+            "updates": [],
+            "warnings": [],
+            "sourceUrl": "https://github.com/medikoo/d"
+          }
+        ],
+        "packageJsonName": "renovate-test",
+        "packageJsonVersion": "1.0.0",
+        "packageJsonType": "library",
+        "npmLock": "package-lock.json",
+        "skipInstalls": true
+      }
+    ],
+    "nuget": [
+      {
+        "packageFile": "renovate-test.csproj",
+        "manager": "nuget",
+        "deps": [
+          {
+            "depType": "nuget",
+            "depName": "fluentassertions",
+            "currentValue": "5.7.0",
+            "managerData": {
+              "lineNumber": 9
+            },
+            "datasource": "nuget",
+            "updates": [
+              {
+                "fromVersion": "5.7.0",
+                "toVersion": "5.10.2",
+                "newValue": "5.10.2",
+                "newMajor": 5,
+                "newMinor": 10,
+                "updateType": "minor",
+                "isSingleVersion": true
+              }
+            ],
+            "warnings": [],
+            "sourceUrl": "https://github.com/fluentassertions/fluentassertions"
+          },
+          {
+            "depType": "nuget",
+            "depName": "Newtonsoft.Json",
+            "currentValue": "11.0.1",
+            "managerData": {
+              "lineNumber": 10
+            },
+            "datasource": "nuget",
+            "updates": [
+              {
+                "fromVersion": "11.0.1",
+                "toVersion": "11.0.2",
+                "newValue": "11.0.2",
+                "newMajor": 11,
+                "newMinor": 0,
+                "updateType": "minor",
+                "isSingleVersion": true
+              },
+              {
+                "fromVersion": "11.0.1",
+                "toVersion": "12.0.3",
+                "newValue": "12.0.3",
+                "newMajor": 12,
+                "newMinor": 0,
+                "updateType": "major",
+                "isSingleVersion": true
+              }
+            ],
+            "warnings": [],
+            "sourceUrl": "https://github.com/JamesNK/Newtonsoft.Json"
+          },
+          {
+            "depType": "nuget",
+            "depName": "nunit",
+            "currentValue": "3.9.0",
+            "managerData": {
+              "lineNumber": 11
+            },
+            "datasource": "nuget",
+            "updates": [
+              {
+                "fromVersion": "3.9.0",
+                "toVersion": "3.12.0",
+                "newValue": "3.12.0",
+                "newMajor": 3,
+                "newMinor": 12,
+                "updateType": "minor",
+                "isSingleVersion": true
+              }
+            ],
+            "warnings": [],
+            "sourceUrl": "https://github.com/nunit/nunit"
+          }
+        ]
+      }
+    ]
+  }
+}
+DEBUG: branchifyUpgrades
+DEBUG: 5 flattened updates found: b, fluentassertions, Newtonsoft.Json, Newtonsoft.Json, nunit
+DEBUG: Returning 5 branch(es)
+DEBUG: generateBranchConfig(1)(branch="renovate/js-b-2.x")
+DEBUG: hasGroupName: false(branch="renovate/js-b-2.x")
+DEBUG: groupEligible: false(branch="renovate/js-b-2.x")
+DEBUG: useGroupSettings: false(branch="renovate/js-b-2.x")
+DEBUG: generateBranchConfig(1)(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: hasGroupName: false(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: groupEligible: false(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: useGroupSettings: false(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: generateBranchConfig(1)(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: hasGroupName: false(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: groupEligible: false(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: useGroupSettings: false(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: generateBranchConfig(1)(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: hasGroupName: false(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: groupEligible: false(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: useGroupSettings: false(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: generateBranchConfig(1)(branch="renovate/dotnet-nunit-3.x")
+DEBUG: hasGroupName: false(branch="renovate/dotnet-nunit-3.x")
+DEBUG: groupEligible: false(branch="renovate/dotnet-nunit-3.x")
+DEBUG: useGroupSettings: false(branch="renovate/dotnet-nunit-3.x")
+DEBUG: config.repoIsOnboarded=true
+DEBUG: Processing 5 branches: renovate/dotnet-fluentassertions-5.x, renovate/dotnet-newtonsoft.json-11.x, renovate/dotnet-newtonsoft.json-12.x, renovate/dotnet-nunit-3.x, renovate/js-b-2.x
+DEBUG: Calculating hourly PRs remaining
+DEBUG: Retrieving PR list
+DEBUG: Retrieved 0 Pull Requests
+DEBUG: currentHourStart=1583607600000
+DEBUG: PR hourly limit remaining: 5
+DEBUG: processBranch with 1 upgrades(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: Setting baseBranch to master(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: latest commit(branch="renovate/dotnet-newtonsoft.json-11.x")
+{
+  "branchName": "master",
+  "latestCommitDate": "2020-03-07 19:05:19 +0000"
+}
+DEBUG: getBranchPr(renovate/dotnet-newtonsoft.json-11.x)(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: findPr(renovate/dotnet-newtonsoft.json-11.x, undefined, open)(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: branchExists=false(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: Branch has 1 upgrade(s)(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: recreateClosed is false(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: findPr(renovate/dotnet-newtonsoft.json-11.x, Update dependency Newtonsoft.Json to v11.0.2, !open)(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: prAlreadyExisted=false(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: Checking schedule(at any time, null)(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: No schedule defined(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: Branch needs creating(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: Using parentBranch: undefined(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: manager.getUpdatedPackageFiles()(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: nuget.updateDependency(): undefined(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: Updating packageFile content(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: Updated 1 package files(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: Getting updated lock files(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: lock file dirs(branch="renovate/dotnet-newtonsoft.json-11.x")
+{
+  "dirs": {
+    "yarnLockDirs": [],
+    "npmLockDirs": [],
+    "pnpmShrinkwrapDirs": [],
+    "lernaDirs": []
+  }
+}
+DEBUG: Writing package.json files(branch="renovate/dotnet-newtonsoft.json-11.x")
+{
+  "packageFiles": [
+    "package.json"
+  ]
+}
+DEBUG: Writing package-lock.json(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: Writing any updated package files(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: No updated lock files in branch(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: 1 file(s) to commit(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: Committing files to branch renovate/dotnet-newtonsoft.json-11.x(branch="renovate/dotnet-newtonsoft.json-11.x")
+INFO: Branch created(branch="renovate/dotnet-newtonsoft.json-11.x")
+{
+  "commit": "1b04408"
+}
+DEBUG: Ensuring PR(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: There are 0 errors and 0 warnings(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: getBranchPr(renovate/dotnet-newtonsoft.json-11.x)(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: findPr(renovate/dotnet-newtonsoft.json-11.x, undefined, open)(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: Creating PR(branch="renovate/dotnet-newtonsoft.json-11.x")
+{
+  "prTitle": "Update dependency Newtonsoft.Json to v11.0.2"
+}
+DEBUG: Creating PR(branch="renovate/dotnet-newtonsoft.json-11.x")
+{
+  "title": "Update dependency Newtonsoft.Json to v11.0.2",
+  "head": "Greg-Smulko:renovate/dotnet-newtonsoft.json-11.x",
+  "base": "master"
+}
+DEBUG: PR created(branch="renovate/dotnet-newtonsoft.json-11.x")
+{
+  "pr": 1
+}
+DEBUG: Adding labels renovate to #1(branch="renovate/dotnet-newtonsoft.json-11.x")
+INFO: PR created(branch="renovate/dotnet-newtonsoft.json-11.x")
+{
+  "pr": 1,
+  "prTitle": "Update dependency Newtonsoft.Json to v11.0.2"
+}
+DEBUG: Created Pull Request #1(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: Checking #1 for automerge(branch="renovate/dotnet-newtonsoft.json-11.x")
+{
+  "automerge": false,
+  "automergeType": "pr",
+  "automergeComment": "automergeComment"
+}
+DEBUG: No automerge(branch="renovate/dotnet-newtonsoft.json-11.x")
+DEBUG: processBranch with 1 upgrades(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: Setting baseBranch to master(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: latest commit(branch="renovate/dotnet-fluentassertions-5.x")
+{
+  "branchName": "master",
+  "latestCommitDate": "2020-03-07 19:05:19 +0000"
+}
+DEBUG: getBranchPr(renovate/dotnet-fluentassertions-5.x)(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: findPr(renovate/dotnet-fluentassertions-5.x, undefined, open)(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: branchExists=false(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: Branch has 1 upgrade(s)(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: recreateClosed is false(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: findPr(renovate/dotnet-fluentassertions-5.x, Update dependency fluentassertions to v5.10.2, !open)(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: prAlreadyExisted=false(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: Checking schedule(at any time, null)(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: No schedule defined(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: Branch needs creating(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: Using parentBranch: undefined(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: manager.getUpdatedPackageFiles()(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: nuget.updateDependency(): undefined(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: Updating packageFile content(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: Updated 1 package files(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: Getting updated lock files(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: lock file dirs(branch="renovate/dotnet-fluentassertions-5.x")
+{
+  "dirs": {
+    "yarnLockDirs": [],
+    "npmLockDirs": [],
+    "pnpmShrinkwrapDirs": [],
+    "lernaDirs": []
+  }
+}
+DEBUG: Writing package.json files(branch="renovate/dotnet-fluentassertions-5.x")
+{
+  "packageFiles": [
+    "package.json"
+  ]
+}
+DEBUG: Writing package-lock.json(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: Writing any updated package files(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: No updated lock files in branch(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: 1 file(s) to commit(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: Committing files to branch renovate/dotnet-fluentassertions-5.x(branch="renovate/dotnet-fluentassertions-5.x")
+INFO: Branch created(branch="renovate/dotnet-fluentassertions-5.x")
+{
+  "commit": "f922c92"
+}
+DEBUG: Ensuring PR(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: There are 0 errors and 0 warnings(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: getBranchPr(renovate/dotnet-fluentassertions-5.x)(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: findPr(renovate/dotnet-fluentassertions-5.x, undefined, open)(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: Creating PR(branch="renovate/dotnet-fluentassertions-5.x")
+{
+  "prTitle": "Update dependency fluentassertions to v5.10.2"
+}
+DEBUG: Creating PR(branch="renovate/dotnet-fluentassertions-5.x")
+{
+  "title": "Update dependency fluentassertions to v5.10.2",
+  "head": "Greg-Smulko:renovate/dotnet-fluentassertions-5.x",
+  "base": "master"
+}
+DEBUG: PR created(branch="renovate/dotnet-fluentassertions-5.x")
+{
+  "pr": 2
+}
+DEBUG: Adding labels renovate to #2(branch="renovate/dotnet-fluentassertions-5.x")
+INFO: PR created(branch="renovate/dotnet-fluentassertions-5.x")
+{
+  "pr": 2,
+  "prTitle": "Update dependency fluentassertions to v5.10.2"
+}
+DEBUG: Created Pull Request #2(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: Checking #2 for automerge(branch="renovate/dotnet-fluentassertions-5.x")
+{
+  "automerge": false,
+  "automergeType": "pr",
+  "automergeComment": "automergeComment"
+}
+DEBUG: No automerge(branch="renovate/dotnet-fluentassertions-5.x")
+DEBUG: processBranch with 1 upgrades(branch="renovate/dotnet-nunit-3.x")
+DEBUG: Setting baseBranch to master(branch="renovate/dotnet-nunit-3.x")
+DEBUG: latest commit(branch="renovate/dotnet-nunit-3.x")
+{
+  "branchName": "master",
+  "latestCommitDate": "2020-03-07 19:05:19 +0000"
+}
+DEBUG: getBranchPr(renovate/dotnet-nunit-3.x)(branch="renovate/dotnet-nunit-3.x")
+DEBUG: findPr(renovate/dotnet-nunit-3.x, undefined, open)(branch="renovate/dotnet-nunit-3.x")
+DEBUG: branchExists=false(branch="renovate/dotnet-nunit-3.x")
+DEBUG: Branch has 1 upgrade(s)(branch="renovate/dotnet-nunit-3.x")
+DEBUG: recreateClosed is false(branch="renovate/dotnet-nunit-3.x")
+DEBUG: findPr(renovate/dotnet-nunit-3.x, Update dependency nunit to v3.12.0, !open)(branch="renovate/dotnet-nunit-3.x")
+DEBUG: prAlreadyExisted=false(branch="renovate/dotnet-nunit-3.x")
+DEBUG: Checking schedule(at any time, null)(branch="renovate/dotnet-nunit-3.x")
+DEBUG: No schedule defined(branch="renovate/dotnet-nunit-3.x")
+DEBUG: Branch needs creating(branch="renovate/dotnet-nunit-3.x")
+DEBUG: Using parentBranch: undefined(branch="renovate/dotnet-nunit-3.x")
+DEBUG: manager.getUpdatedPackageFiles()(branch="renovate/dotnet-nunit-3.x")
+DEBUG: nuget.updateDependency(): undefined(branch="renovate/dotnet-nunit-3.x")
+DEBUG: Updating packageFile content(branch="renovate/dotnet-nunit-3.x")
+DEBUG: Updated 1 package files(branch="renovate/dotnet-nunit-3.x")
+DEBUG: Getting updated lock files(branch="renovate/dotnet-nunit-3.x")
+DEBUG: lock file dirs(branch="renovate/dotnet-nunit-3.x")
+{
+  "dirs": {
+    "yarnLockDirs": [],
+    "npmLockDirs": [],
+    "pnpmShrinkwrapDirs": [],
+    "lernaDirs": []
+  }
+}
+DEBUG: Writing package.json files(branch="renovate/dotnet-nunit-3.x")
+{
+  "packageFiles": [
+    "package.json"
+  ]
+}
+DEBUG: Writing package-lock.json(branch="renovate/dotnet-nunit-3.x")
+DEBUG: Writing any updated package files(branch="renovate/dotnet-nunit-3.x")
+DEBUG: No updated lock files in branch(branch="renovate/dotnet-nunit-3.x")
+DEBUG: 1 file(s) to commit(branch="renovate/dotnet-nunit-3.x")
+DEBUG: Committing files to branch renovate/dotnet-nunit-3.x(branch="renovate/dotnet-nunit-3.x")
+INFO: Branch created(branch="renovate/dotnet-nunit-3.x")
+{
+  "commit": "c674e43"
+}
+DEBUG: Ensuring PR(branch="renovate/dotnet-nunit-3.x")
+DEBUG: There are 0 errors and 0 warnings(branch="renovate/dotnet-nunit-3.x")
+DEBUG: getBranchPr(renovate/dotnet-nunit-3.x)(branch="renovate/dotnet-nunit-3.x")
+DEBUG: findPr(renovate/dotnet-nunit-3.x, undefined, open)(branch="renovate/dotnet-nunit-3.x")
+DEBUG: Creating PR(branch="renovate/dotnet-nunit-3.x")
+{
+  "prTitle": "Update dependency nunit to v3.12.0"
+}
+DEBUG: Creating PR(branch="renovate/dotnet-nunit-3.x")
+{
+  "title": "Update dependency nunit to v3.12.0",
+  "head": "Greg-Smulko:renovate/dotnet-nunit-3.x",
+  "base": "master"
+}
+DEBUG: PR created(branch="renovate/dotnet-nunit-3.x")
+{
+  "pr": 3
+}
+DEBUG: Adding labels renovate to #3(branch="renovate/dotnet-nunit-3.x")
+INFO: PR created(branch="renovate/dotnet-nunit-3.x")
+{
+  "pr": 3,
+  "prTitle": "Update dependency nunit to v3.12.0"
+}
+DEBUG: Created Pull Request #3(branch="renovate/dotnet-nunit-3.x")
+DEBUG: Checking #3 for automerge(branch="renovate/dotnet-nunit-3.x")
+{
+  "automerge": false,
+  "automergeType": "pr",
+  "automergeComment": "automergeComment"
+}
+DEBUG: No automerge(branch="renovate/dotnet-nunit-3.x")
+DEBUG: processBranch with 1 upgrades(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: Setting baseBranch to master(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: latest commit(branch="renovate/dotnet-newtonsoft.json-12.x")
+{
+  "branchName": "master",
+  "latestCommitDate": "2020-03-07 19:05:19 +0000"
+}
+DEBUG: getBranchPr(renovate/dotnet-newtonsoft.json-12.x)(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: findPr(renovate/dotnet-newtonsoft.json-12.x, undefined, open)(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: branchExists=false(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: Branch has 1 upgrade(s)(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: recreateClosed is false(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: findPr(renovate/dotnet-newtonsoft.json-12.x, Update dependency Newtonsoft.Json to v12, !open)(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: prAlreadyExisted=false(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: Checking schedule(at any time, null)(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: No schedule defined(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: Branch needs creating(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: Using parentBranch: undefined(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: manager.getUpdatedPackageFiles()(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: nuget.updateDependency(): undefined(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: Updating packageFile content(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: Updated 1 package files(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: Getting updated lock files(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: lock file dirs(branch="renovate/dotnet-newtonsoft.json-12.x")
+{
+  "dirs": {
+    "yarnLockDirs": [],
+    "npmLockDirs": [],
+    "pnpmShrinkwrapDirs": [],
+    "lernaDirs": []
+  }
+}
+DEBUG: Writing package.json files(branch="renovate/dotnet-newtonsoft.json-12.x")
+{
+  "packageFiles": [
+    "package.json"
+  ]
+}
+DEBUG: Writing package-lock.json(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: Writing any updated package files(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: No updated lock files in branch(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: 1 file(s) to commit(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: Committing files to branch renovate/dotnet-newtonsoft.json-12.x(branch="renovate/dotnet-newtonsoft.json-12.x")
+INFO: Branch created(branch="renovate/dotnet-newtonsoft.json-12.x")
+{
+  "commit": "97393f0"
+}
+DEBUG: Ensuring PR(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: There are 0 errors and 0 warnings(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: getBranchPr(renovate/dotnet-newtonsoft.json-12.x)(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: findPr(renovate/dotnet-newtonsoft.json-12.x, undefined, open)(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: Creating PR(branch="renovate/dotnet-newtonsoft.json-12.x")
+{
+  "prTitle": "Update dependency Newtonsoft.Json to v12"
+}
+DEBUG: Creating PR(branch="renovate/dotnet-newtonsoft.json-12.x")
+{
+  "title": "Update dependency Newtonsoft.Json to v12",
+  "head": "Greg-Smulko:renovate/dotnet-newtonsoft.json-12.x",
+  "base": "master"
+}
+DEBUG: PR created(branch="renovate/dotnet-newtonsoft.json-12.x")
+{
+  "pr": 4
+}
+DEBUG: Adding labels renovate to #4(branch="renovate/dotnet-newtonsoft.json-12.x")
+INFO: PR created(branch="renovate/dotnet-newtonsoft.json-12.x")
+{
+  "pr": 4,
+  "prTitle": "Update dependency Newtonsoft.Json to v12"
+}
+DEBUG: Created Pull Request #4(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: Checking #4 for automerge(branch="renovate/dotnet-newtonsoft.json-12.x")
+{
+  "automerge": false,
+  "automergeType": "pr",
+  "automergeComment": "automergeComment"
+}
+DEBUG: No automerge(branch="renovate/dotnet-newtonsoft.json-12.x")
+DEBUG: processBranch with 1 upgrades(branch="renovate/js-b-2.x")
+DEBUG: Setting baseBranch to master(branch="renovate/js-b-2.x")
+DEBUG: latest commit(branch="renovate/js-b-2.x")
+{
+  "branchName": "master",
+  "latestCommitDate": "2020-03-07 19:05:19 +0000"
+}
+DEBUG: getBranchPr(renovate/js-b-2.x)(branch="renovate/js-b-2.x")
+DEBUG: findPr(renovate/js-b-2.x, undefined, open)(branch="renovate/js-b-2.x")
+DEBUG: branchExists=false(branch="renovate/js-b-2.x")
+DEBUG: Branch has 1 upgrade(s)(branch="renovate/js-b-2.x")
+DEBUG: recreateClosed is false(branch="renovate/js-b-2.x")
+DEBUG: findPr(renovate/js-b-2.x, Update dependency b to v2, !open)(branch="renovate/js-b-2.x")
+DEBUG: prAlreadyExisted=false(branch="renovate/js-b-2.x")
+DEBUG: Checking schedule(at any time, null)(branch="renovate/js-b-2.x")
+DEBUG: No schedule defined(branch="renovate/js-b-2.x")
+DEBUG: Branch needs creating(branch="renovate/js-b-2.x")
+DEBUG: Using parentBranch: undefined(branch="renovate/js-b-2.x")
+DEBUG: manager.getUpdatedPackageFiles()(branch="renovate/js-b-2.x")
+DEBUG: npm.updateDependency(): dependencies.b = ^2.0.0(branch="renovate/js-b-2.x")
+DEBUG: Updating packageFile content(branch="renovate/js-b-2.x")
+DEBUG: Updated 1 package files(branch="renovate/js-b-2.x")
+DEBUG: Getting updated lock files(branch="renovate/js-b-2.x")
+DEBUG: lock file dirs(branch="renovate/js-b-2.x")
+{
+  "dirs": {
+    "yarnLockDirs": [],
+    "npmLockDirs": [
+      "package-lock.json"
+    ],
+    "pnpmShrinkwrapDirs": [],
+    "lernaDirs": []
+  }
+}
+DEBUG: Writing package.json files(branch="renovate/js-b-2.x")
+{
+  "packageFiles": [
+    "package.json"
+  ]
+}
+DEBUG: Writing package-lock.json(branch="renovate/js-b-2.x")
+DEBUG: Writing any updated package files(branch="renovate/js-b-2.x")
+DEBUG: Writing package.json(branch="renovate/js-b-2.x")
+DEBUG: Generating package-lock.json for .(branch="renovate/js-b-2.x")
+DEBUG: Spawning npm install to create /mnt/renovate/gh/Greg-Smulko/renovate-test-2/package-lock.json(branch="renovate/js-b-2.x")
+DEBUG: Using npm: node /home/ubuntu/renovateapp/node_modules/npm/bin/npm-cli.js install --package-lock-only --no-audit(branch="renovate/js-b-2.x")
+DEBUG: exec completed(branch="renovate/js-b-2.x")
+{
+  "cmd": "node /home/ubuntu/renovateapp/node_modules/npm/bin/npm-cli.js install --package-lock-only --no-audit",
+  "seconds": 3,
+  "stdout": "added 73 packages in 1.471s\n",
+  "stderr": "npm WARN renovate-test@1.0.0 No description\n\n"
+}
+DEBUG: package-lock.json needs updating(branch="renovate/js-b-2.x")
+DEBUG: Updated 1 lock files(branch="renovate/js-b-2.x")
+{
+  "updatedArtifacts": [
+    "package-lock.json"
+  ]
+}
+DEBUG: 2 file(s) to commit(branch="renovate/js-b-2.x")
+DEBUG: Committing files to branch renovate/js-b-2.x(branch="renovate/js-b-2.x")
+INFO: Branch created(branch="renovate/js-b-2.x")
+{
+  "commit": "74b2586"
+}
+DEBUG: Ensuring PR(branch="renovate/js-b-2.x")
+DEBUG: There are 0 errors and 0 warnings(branch="renovate/js-b-2.x")
+DEBUG: getBranchPr(renovate/js-b-2.x)(branch="renovate/js-b-2.x")
+DEBUG: findPr(renovate/js-b-2.x, undefined, open)(branch="renovate/js-b-2.x")
+DEBUG: Creating PR(branch="renovate/js-b-2.x")
+{
+  "prTitle": "Update dependency b to v2"
+}
+DEBUG: Creating PR(branch="renovate/js-b-2.x")
+{
+  "title": "Update dependency b to v2",
+  "head": "Greg-Smulko:renovate/js-b-2.x",
+  "base": "master"
+}
+DEBUG: PR created(branch="renovate/js-b-2.x")
+{
+  "pr": 5
+}
+DEBUG: Adding labels renovate to #5(branch="renovate/js-b-2.x")
+INFO: PR created(branch="renovate/js-b-2.x")
+{
+  "pr": 5,
+  "prTitle": "Update dependency b to v2"
+}
+DEBUG: Created Pull Request #5(branch="renovate/js-b-2.x")
+DEBUG: Ensuring comment ":warning: Artifact update problem" in #5 is removed(branch="renovate/js-b-2.x")
+DEBUG: Retrieved closed PR list with graphql(branch="renovate/js-b-2.x")
+{
+  "prNumbers": []
+}
+DEBUG: Getting comments for #5(branch="renovate/js-b-2.x")
+DEBUG: Found 0 comments(branch="renovate/js-b-2.x")
+DEBUG: Checking #5 for automerge(branch="renovate/js-b-2.x")
+{
+  "automerge": false,
+  "automergeType": "pr",
+  "automergeComment": "automergeComment"
+}
+DEBUG: No automerge(branch="renovate/js-b-2.x")
+DEBUG: Ensuring master issue
+DEBUG: getBranchPr(renovate/dotnet-newtonsoft.json-11.x)
+DEBUG: findPr(renovate/dotnet-newtonsoft.json-11.x, undefined, open)
+DEBUG: getBranchPr(renovate/dotnet-fluentassertions-5.x)
+DEBUG: findPr(renovate/dotnet-fluentassertions-5.x, undefined, open)
+DEBUG: getBranchPr(renovate/dotnet-nunit-3.x)
+DEBUG: findPr(renovate/dotnet-nunit-3.x, undefined, open)
+DEBUG: getBranchPr(renovate/dotnet-newtonsoft.json-12.x)
+DEBUG: findPr(renovate/dotnet-newtonsoft.json-12.x, undefined, open)
+DEBUG: getBranchPr(renovate/js-b-2.x)
+DEBUG: findPr(renovate/js-b-2.x, undefined, open)
+DEBUG: ensureIssue(Update Dependencies (Renovate Bot))
+INFO: Issue created
+DEBUG: branchPrefix: renovate/
+DEBUG: Found 0 Renovate PRs
+{
+  "renovatePrs": []
+}
+DEBUG: Removing any stale branches
+DEBUG: config.repoIsOnboarded=true
+DEBUG: Branch lists
+{
+  "branchList": [
+    "renovate/js-b-2.x",
+    "renovate/dotnet-fluentassertions-5.x",
+    "renovate/dotnet-newtonsoft.json-11.x",
+    "renovate/dotnet-newtonsoft.json-12.x",
+    "renovate/dotnet-nunit-3.x"
+  ],
+  "renovateBranches": [
+    "renovate/dotnet-fluentassertions-5.x",
+    "renovate/dotnet-newtonsoft.json-11.x",
+    "renovate/dotnet-newtonsoft.json-12.x",
+    "renovate/dotnet-nunit-3.x",
+    "renovate/js-b-2.x"
+  ]
+}
+DEBUG: remainingBranches=
+DEBUG: No branches to clean up
+DEBUG: ensureIssueClosing(Action Required: Fix Renovate Configuration)
+DEBUG: Retrieving issueList
+DEBUG: Retrieved 1 issues
+INFO: Repository finished
